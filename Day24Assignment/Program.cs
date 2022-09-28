@@ -10,6 +10,7 @@
             Console.WriteLine("3. UC3 - Validate Email Address");
             Console.WriteLine("4. UC4 - Validate Mobile Number");
             Console.WriteLine("5. UC5 - Validate password Rule1 - Password should have minimum 8 characters");
+            Console.WriteLine("6. UC6-Valid Password Rule 2");
 
             int option = Convert.ToInt32(Console.ReadLine());
 
@@ -31,6 +32,9 @@
                 case 5:
                     PassWordRule1.ValidatePassword();
                     break;
+                case 6:
+                    PassWordRule2.ValidatePassword();   
+                    break ;
                 default:
                     Console.WriteLine("Choose a appropriate option");
                     break;
