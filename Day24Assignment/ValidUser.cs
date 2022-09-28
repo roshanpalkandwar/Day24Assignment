@@ -12,13 +12,14 @@ namespace Day24Assignment
         private List<string> sampleMails = new List<string>()
         {
             "abc@yahoo.com",
-            "abc-100@yahoo.com",
+            "abc@gmail.com.com",
             "abc.100@yahoo.com",
             "abc111@abc.com",
             "abc-100@abc.net",
             "abc.100@abc.com.au",
             "abc@1.com",
-            "abc@gmail.com.com",
+            
+            "abc-100@yahoo.com",
             "abc+100@gmail.com"
         };
         private static string REGEX_FIRSTNAME = "^[A-Z][a-z]{2,}$";
