@@ -1,4 +1,6 @@
-﻿namespace Day24Assignment
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace Day24Assignment
 {
     internal class Program
     {
@@ -13,6 +15,7 @@
             Console.WriteLine("6. UC6-Valid Password Rule 2");
             Console.WriteLine("7. UC7-Valid Password Rule 3");
             Console.WriteLine("8. UC8-Valid Password Rule 4");
+            Console.WriteLine("9. UC9-Valid Email Sample");
             int option = Convert.ToInt32(Console.ReadLine());
 
             switch (option)
@@ -42,6 +45,15 @@
                 case 8:
                     PassWordRule4.ValidatePassword();
                     break;
+                case 9:
+                    EmailSample validate=new EmailSample();
+                    foreach (string mail in validate.GetList())
+                    {
+                        Console.Write(mail + " : ");
+                        validate.PrintResult(validate.ValidateEmail2(mail));
+                    }
+                    break ;
+
                 default:
                     Console.WriteLine("Choose a appropriate option");
                     break;
