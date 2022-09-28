@@ -107,6 +107,92 @@ namespace UnitTest1
             Assert.IsFalse(result);
         }
         [TestMethod]
+        public void GivenUserFistName_WhenValidate_Should_Throw_InvalidUserDetailException_Indicating_Invalid_FirstName()
+        {
+            try
+            {
+                //Arrange
+                ValidUser2 user = new ValidUser2();
+                string firstName = "snehil";
+                //Act
+                bool result = user.ValidateFirstName(firstName);
+            }
+            catch (InvalidUserDetailException e)
+            {
+                //Assert
+                Assert.AreEqual("Invalid first name.", e.Message);
+            }
+        }
+        [TestMethod]
+        public void GivenUserLastName_WhenValidate_Should_Throw_InvalidUserDetailException_Indicating_Invalid_LastName()
+        {
+            try
+            {
+                //Arrange
+                ValidUser2 user = new ValidUser2();
+                string lastName = "verma";
+                //Act
+                bool result = user.ValidateLastName(lastName);
+            }
+            catch (InvalidUserDetailException e)
+            {
+                //Assert
+                Assert.AreEqual("Invalid last name.", e.Message);
+            }
+        }
+        [TestMethod]
+        public void GivenEmail_WhenValidate_Should_Throw_InvalidUserDetailException_Indicating_Invalid_Email()
+        {
+            try
+            {
+                //Arrange
+                ValidUser2 user = new ValidUser2();
+                string email = "SnehilSinghgmail.com";
+                //Act
+                bool result = user.ValidateEmail(email);
+            }
+            catch (InvalidUserDetailException e)
+            {
+                //Assert
+                Assert.AreEqual("Invalid email id.", e.Message);
+            }
+        }
+        [TestMethod]
+        public void GivenMobileNumber_WhenValidate_Should_Throw_InvalidUserDetailException_Indicating_Invalid_MobileNumber()
+        {
+            try
+            {
+                //Arrange
+                 ValidUser2 user = new ValidUser2();
+                string mobileNumber = "91 0876543210";
+                //Act
+                bool result = user.ValidateMobileNumber(mobileNumber);
+            }
+            catch (InvalidUserDetailException e)
+            {
+                //Assert
+                Assert.AreEqual("Invalid mobile number.", e.Message);
+            }
+        }
+        [TestMethod]
+        public void GivenPassword_WhenValidate_Should_Throw_InvalidUserDetailException_Indicating_Invalid_Password()
+        {
+            try
+            {
+                //Arrange
+                ValidUser2 user = new ValidUser2();
+                string password = "snehil@#543";
+                //Act
+                bool result = user.ValidatePassword(password);
+            }
+            catch (InvalidUserDetailException e)
+            {
+                //Assert
+                Assert.AreEqual("Invalid password.", e.Message);
+            }
+        }
+
+        [TestMethod]
         public void GivenPassword_WhenValidate_ShouldReturnFalse()
         {
             //Arrange
